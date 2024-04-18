@@ -1,0 +1,450 @@
+<html>
+
+	
+<head>
+
+		
+	<title>LOGIN FORM</title>
+
+        
+	<script type="text/javascript">
+
+            
+
+        
+		function fname()
+
+ {
+		
+
+        var name=document.getElementById("txt").value;
+
+
+	                          document.getElementById("txt").value=name.toUpperCase();
+
+
+	                  }
+
+        
+		function lname()
+
+ {
+
+            
+			var name=document.getElementById('txt1').value;
+
+            
+			document.getElementById('txt1').value=name.toUpperCase();
+
+       
+		 }
+	        
+
+         function age()
+
+ {
+
+           
+		 var a = document.getElementById("uname").value;
+
+            
+
+            
+		 if(a<18)
+
+            {
+		
+
+                document.getElementById("err3").innerHTML = "Above 18 Only";
+
+ 
+	         
+
+            }
+
+        
+		}
+
+        
+		function validateemail()
+
+       
+		 {
+
+            
+			var email = document.getElementById("email").value;
+
+            
+			if(email.length==0)
+
+{
+
+                
+				document.getElementById("emailerr").innerHTML="Please Enter Email";
+
+            
+			}
+
+            
+		else
+
+{
+		
+
+                document.getElementById("emailerr").innerHTML="";
+
+                
+
+            
+		}
+
+            
+		var atpos = email.indexOf('@');
+
+            
+
+            
+		var dotpos = email.lastIndexOf('.');
+
+            
+
+            
+
+            
+		if(atpos<5 || dotpos-atpos<5)
+
+{
+
+                
+		document.getElementById("emailerr").innerHTML="Please Enter Valid Email";
+
+            
+		}
+
+            
+		else
+
+ {
+
+                
+		document.getElementById("emailerr").innerHTML="";
+
+                
+
+            
+		}
+
+            
+
+        
+		}
+
+        
+		function validatepassword()
+
+        
+		{
+
+            
+			var b = document.getElementById("pwd").value;
+
+            
+
+            
+			if(b.length==0)
+
+{
+
+                
+document.getElementById("err4").innerHTML = "Please Enter Password";
+
+                
+document.getElementById("err4").style.color="blue";
+
+                
+document.getElementById("err4").style.fontSize=20;
+
+                
+
+            
+} 
+else
+
+            {
+
+               
+ document.getElementById("err4").innerHTML = "";
+
+            }
+
+        }
+
+        
+function confirmpassword()
+
+        {
+
+           
+ var a = document.getElementById("cpwd").value;
+
+           
+ var b = document.getElementById("pwd").value;
+
+
+
+           
+ if(a!=b)
+
+            {
+
+               
+ document.getElementById("err5").innerHTML = "Passwords do not match";
+
+               
+ document.getElementById("err5").style.color="blue";
+
+                
+
+           
+ } 
+else
+
+            {
+
+                
+document.getElementById("err5").innerHTML = "";
+
+            }
+
+        }
+
+        
+function uid()
+
+       
+ {
+
+       
+     var a = document.getElementById("uid").value;
+
+            
+
+      
+      if(isNan(a))
+
+            {
+
+                
+document.getElementById("err6").innerHTML = "Please enter numbers only";
+
+
+
+                
+
+           
+ }
+ else
+
+            {
+
+                
+document.getElementById("err6").innerHTML = "";
+
+               
+ document.getElementById("err6").style.color="blue";            }
+
+        }
+			
+function myFunction() {
+  				
+var x = document.getElementById("pwd");
+  				
+if (x.type === "password") {
+    					
+x.type = "text";
+  				} 
+else {
+					
+x.type = "password";
+  				}
+			}
+			
+function checkPassword() { 
+                				
+var password1 = document.getElementById("pwd").value; 
+                				
+var password2 = document.getElementById("cpwd").value;
+                				
+if (password1 == '') 
+                    				
+alert ("Please enter Password");  
+                				
+else if (password2 == '') 
+                    				
+alert ("Please enter confirm password"); 
+                      
+                				
+else if (password1 != password2) { 
+                    				
+alert ("\nConfirm Password did not match: Please try again...") 
+                    				
+return false; 
+                				} 
+  
+                  				
+else{ 
+                    				
+alert("Password Matching") 
+                    				
+return true; 
+                				} 
+            			} 
+
+       
+ </script>
+
+        
+
+		
+<style>
+
+			
+div{
+
+				
+border: 5px solid black;
+
+				
+background-color:#c1d1d4;
+
+                
+width:50%;
+
+			}
+
+			
+body{
+
+				
+background-color:grey;
+
+			}
+
+
+
+		
+</style>
+
+	</head>
+
+   
+ <body>
+
+        
+<center><br><br><br><br><br><br><br><br><br>
+
+            
+<div style="border:box;">
+
+    
+<h3 align=center><b><u>NEW USER SIGN-UP</u></b></h3>
+
+    
+<form action = "login" method = post>
+
+        
+<table align="center" width="500">
+
+           
+ <tr>
+
+               
+ <td><br> FIRST NAME</td>
+
+               
+ <td><br><input type="text" id="txt" onkeyup="fname()" size=30 maxlength=20 name = "fn" required><span id="err1"></span>
+</td>
+
+            </tr>
+
+            
+
+            <tr>
+
+                
+<td><br>LAST NAME</td>
+
+               
+ <td><br><input type="text" name = "ln" id="txt1" onkeyup="lname()" size=30 maxlength=20 required><span id="err2"></span></td>
+
+            </tr>
+
+            <tr>
+
+                <td><br>AGE</td>
+
+                <td><br><input type="text" id="uname" onkeyup="age()" name = "a" size=30 maxlength=20 required><span id="err3"></span></td>
+
+            </tr>
+
+            
+
+            <tr>
+
+                <td><br>USER-ID</td>
+
+                <td><br><input type="text" id="uid" name = "id" onkeyup="uid()" size=30 maxlength=20 required><span id="err6"></span></td>
+
+            </tr>
+
+            <tr>
+
+                <td><br>EMAIL</td>
+
+                <td><br><input type="text" name = "e" id="email" onkeyup="validateemail()" size=30 maxlength=20 required><span id="emailerr"></span></td>
+
+            </tr>
+
+            <tr>
+
+                <td><br>PASSWORD</td>
+
+                <td><br><input type="password" name = "pwd" id="pwd" onchange="validatepassword()" name="p1"><span id="err4"></span></td>
+
+            </tr>
+
+            <tr>
+
+                <td><br>CONFIRM PASSWORD</td>
+
+                <td><br><input type="password" id="cpwd" onblur="checkPassword()" name="p2"><span id="err5"></span></td>
+
+                
+
+            </tr>
+
+            <tr>
+	
+
+               <td align="center" colspan="2"> <br><input type="checkbox" onclick="myFunction()">Show Password<br>
+               <br>
+               <input type = "submit" > </td></tr>
+
+
+
+        </table>
+
+    </form>
+
+            </div>
+
+<br>
+
+<br>
+
+</center>
+
+        </body>
+
+</html>
+

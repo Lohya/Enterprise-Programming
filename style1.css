@@ -1,0 +1,176 @@
+
+h1{
+
+    font-size: 350%;
+
+    color:black;
+
+    height:50%;
+
+
+
+    background-image: url('https://www.larutadelsorigens.cat/wallpic/full/73-735776_office-wallpapers-hd-home-classic-3d-desktop-wallpaper.png');
+
+    font-family:;
+
+    
+
+    text-align: center;
+
+    vertical-align: middle;
+
+    line-height: 500px;
+
+}
+
+img{
+
+	width:300px;
+
+	height:300px;
+
+	
+
+	border-style:box;
+
+  	border-width:15px;
+
+	border-color:black;
+
+}
+
+
+
+div{
+
+    font-size: 120%;
+
+
+
+    color:black;
+
+
+
+    height:10%;
+
+
+
+    text-align:center;
+
+    
+
+
+
+}
+
+#part1{
+
+    border: 3px solid black;
+
+    background-color:grey;
+
+
+
+    color:black;
+
+    
+
+    height:20%;
+
+    
+
+    text-align:center;
+
+   
+
+    
+
+}
+
+#part2{
+
+    background-color:mistyrose;
+
+    border: 3px solid black;
+
+
+
+    color:black;
+
+    
+
+    height:30%;
+
+    
+
+    text-align:center;
+
+    
+
+    
+
+}
+
+#part3{
+
+    border: 3px solid black;
+
+    background-color:grey;
+
+
+
+    color:black;
+
+    
+
+    height:20%;
+
+    
+
+    text-align:center;
+
+    
+
+    
+
+}
+
+button{
+
+	border-style:box;
+
+  	border-width:3px;
+
+	border-color:black;
+
+}
+
+body{
+	text-align:center;
+}
+
+
+
+#part4{
+
+    border: 3px solid black;
+
+    background-color:grey;
+
+
+
+    color:black;
+
+    
+
+    height:10%;
+
+    
+
+    text-align:center;
+
+ width= 50%;   
+
+    
+
+}

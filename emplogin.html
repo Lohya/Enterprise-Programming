@@ -1,0 +1,150 @@
+<html>
+
+<head>
+
+ <title>EMPLOYEE MODULE </title>
+
+ <script type="text/javascript">
+
+     
+
+     function validate()
+
+     {
+
+         
+
+         var a = document.f.fname.value;
+
+         var b = document.f.pwd.value;
+
+         
+
+         if(a=="")
+
+         {
+
+             alert("username filed should not be empty!!!");
+
+             document.f.fname.focus();
+
+             return false;
+
+         }
+
+         if(a.length<5)
+
+         {
+
+             alert("username should be more than or equal to 5 characters!!!");
+
+             document.f.fname.focus();
+
+             return false;
+
+         }
+
+         if(b.length==0)
+
+         {
+
+             alert("Password filed should not be empty!!!");
+
+             document.f.pwd.focus();
+
+             return false;
+
+         }
+
+         if(b.length<5)
+
+         {
+
+             alert("Password should be more than or equal to 5 characters!!!");
+
+             document.f.pwd.focus();
+
+             return false;
+
+         }
+
+     }
+
+ </script>
+
+ <style>
+
+     body{font-family:Arial,Helvetica text-align: center;}
+
+     form{border: 3px solid #f1f1f1 text-align: center;}
+
+button{
+
+background-color:#4CAF50;
+
+color:white;
+
+padding:14px 20px;
+
+margin 8px 0;
+
+border:none;
+
+width:100%;
+
+text-align: center;
+
+}
+
+ 
+
+
+
+</style>
+
+</head>
+
+
+
+<body style="text-align: center;background-image: url('i4.jpg');">
+
+      <br>
+
+      <br>
+
+      <br>
+
+      <h1 style="color : White;"> EMPLOYEE LOGIN </h1>
+
+<form name="f" action="" method="post" onsubmit="return validate()">
+
+<br>
+
+<img src="employee.png" width:40% border-radius:50% >
+
+<br>
+
+<h3 style="color : White;">USERNAME</h3>
+
+<input type="text" name="fname" placeholder="Enter username">
+
+<br>
+
+<h3 style="color : White;">PASSWORD</h3>
+
+<input type="password" name="pwd" placeholder="Enter Password"><br><br>
+
+<br>
+
+<input type="submit" >
+
+<br>
+
+<br>
+
+</form>
+
+</body>
+
+</html>
+
